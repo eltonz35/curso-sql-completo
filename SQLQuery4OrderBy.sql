@@ -1,0 +1,26 @@
+--ORDER BY--
+
+--SELECT coluna1,coluna2
+--FROM tabela
+--ORDER BY coluna1 asc/desc
+
+SELECT FirstName, LastName
+FROM Person.Person
+ORDER BY FirstName ASC, LastName DESC
+
+--DESAFIO 01--
+
+/* OBTER O PRODUCTID DOS 10 PRODUTOS MAIS CAROS CADASTRADOS NO SISTEMA,
+LISTANDO DO MAIS CARO PARA O MAIS BARATO */
+
+SELECT TOP 10 ProductID, ListPrice
+FROM Production.Product
+ORDER BY ListPrice DESC
+
+--DESAFIO 02--
+
+/* OBTER O NOME E O NUMERO DE PRODUTOS QUE TEM O PRODUCTID ENTRE 1~4 */
+
+SELECT TOP 4 Name, ProductNumber
+FROM Production.Product
+ORDER BY ProductID
