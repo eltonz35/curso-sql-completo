@@ -1,0 +1,26 @@
+--UNION--
+
+--O OPERADOR UNION COMBINA DOIS OU MAIS RESULTADOS DE UM SELECT EM UM RESULTADO APENAS.
+
+--SELECT COLUNA1, COLUNA2
+--FROM TABELA1
+--UNION
+--SELECT COLUNA1, COLUNA2
+--FROM TABELA2
+
+SELECT [ProductID], [Name], [ProductNumber]
+FROM Production.Product
+WHERE NAME LIKE '%CHAIN%'
+UNION
+SELECT [ProductID], [Name], [ProductNumber]
+FROM Production.Product
+WHERE NAME LIKE '%DECAL%'
+
+
+SELECT FirstName, Title, MiddleName
+FROM Person.Person
+WHERE Title = 'MR.'
+UNION
+SELECT FirstName, Title, MiddleName
+FROM Person.Person
+WHERE MiddleName = 'A'
